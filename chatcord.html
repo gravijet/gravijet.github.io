@@ -1,1 +1,36 @@
-<meta http-equiv="Refresh" content="0; url='https://dsc.gg/chatcord'" />
+<html>
+
+<head>
+    <meta http-equiv="Refresh" content="5; url='https://dsc.gg/chatcord'" />
+</head>
+
+
+<body>
+    <h1 id="seppl">
+        Ihre Internetverbindung wird überprüft!
+    </h1>
+
+    <script>
+        let countdown = 4;
+        setInterval(() => {
+            if (countdown > 0) {
+                document.getElementById("seppl").innerText = `Noch ${countdown} Sekunden`;
+                countdown--;
+            }
+
+            if (countdown === 0) {
+                document.getElementById("seppl").innerText = "In der Endphase!"
+                setInterval(() => {
+                    var x = Math.floor(Math.random() * 256);
+                    var y = Math.floor(Math.random() * 256);
+                    var z = Math.floor(Math.random() * 256);
+                    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+                    document.body.style.background = bgColor;
+                }, 100);
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
